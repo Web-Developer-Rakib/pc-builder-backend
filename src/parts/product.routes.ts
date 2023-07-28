@@ -1,11 +1,8 @@
 import express from "express";
-import { getRandomProducts } from "./product.controller";
+import { getProductsByCategory, getRandomProducts } from "./product.controller";
 const productRouter = express.Router();
 
 productRouter.post("/", getRandomProducts);
-// productRouter.get("/", getAllBooks);
-// productRouter.get("/:bookId", getSingleBook);
-// productRouter.put("/:bookId", updateBook);
-// productRouter.delete("/:bookId", deleteBook);
+productRouter.get("/get-products-by-category/:category", getProductsByCategory);
 
 export default productRouter;
