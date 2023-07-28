@@ -26,7 +26,7 @@ interface IProduct extends Document {
     type: string;
     resolution: string;
     voltage: string;
-    [key: string]: string; // Allows additional dynamic keys
+    [key: string]: string;
   };
   individualRating: number;
   averageRating: number;
@@ -67,10 +67,12 @@ const productSchema: Schema<IProduct> = new Schema({
   individualRating: {
     type: Number,
     required: true,
+    default: 0,
   },
   averageRating: {
     type: Number,
     required: true,
+    default: 0,
   },
   reviews: [
     {
