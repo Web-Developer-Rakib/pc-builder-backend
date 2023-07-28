@@ -9,7 +9,7 @@ export const getRandomProducts = async (
 ): Promise<void> => {
   try {
     const randomProducts: IProduct[] = await Product.aggregate([
-      { $sample: { size: 6 } }, // Get 6 random documents from the collection
+      { $sample: { size: 6 } },
     ]);
 
     res.status(200).json(randomProducts);
