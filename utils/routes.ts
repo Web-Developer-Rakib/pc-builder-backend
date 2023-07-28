@@ -1,4 +1,4 @@
-import productRouter from "../src/parts/product.routes";
+import productRouter from "../src/product/product.routes";
 
 export const routes = [
   {
